@@ -1,0 +1,303 @@
+/**
+ * This stylesheet will work pretty well with a regular Org Mode HTML export.
+ * However, you do have to turn off all of the defaults:
+ *
+ * (setq org-export-html-style-include-scripts nil
+ *       org-export-html-style-include-default nil)
+ *
+ * and insert a call to the stylesheet:
+ *
+ * (setq org-export-html-style
+ *       "<link rel=\"stylesheet\" type=\"text/css\" href=\"org-style.css\" />")
+ */
+
+/* @group Fonts */
+
+p {
+    font-family: "Verdana";
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: "Arial";
+}
+
+pre {
+    font-family: Monaco, "Courier New", Courier;
+}
+
+#text-table-of-contents a {
+    font-family: "Arial";
+}
+
+/* @end */
+
+/* @group Baseline */
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size:2.1em;
+    padding:20px 0 20px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 7%;
+    color: grey;
+}
+
+
+h2 {
+    font-family:sans-serif;
+    font-size:1.45em;
+    line-height:16px;
+    padding:10px 0 10px 0;
+    color: black;
+    border-bottom: 1px solid #ddd;
+}
+
+.outline-text-2 {
+    margin-left: 0.1em
+}
+
+h3 {
+    font-family:sans-serif;
+    font-size:1.3em;
+    color: grey;
+    margin-left: 0.6em;
+    border-bottom: 1px solid #ddd;
+}
+
+/* #A34D32;*/
+
+
+.outline-text-3 {
+    margin-left: 0.9em;
+}
+
+h4 {
+    font-family:sans-serif;
+    font-size:1.2em;
+    margin-left: 1.2em;
+    color: black;
+}
+
+.outline-text-4 {
+    margin-left: 1.45em;
+}
+
+p, blockquote, pre, td, th, label {
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+p.small, #postamble {
+	margin: 0;
+	font-size: 0.8333333333333334em;
+	line-height: 1.8em;
+	margin-bottom: 1.8em;
+}
+table {
+	border-collapse: collapse;
+	margin-bottom: 1.5em;
+}
+/* @end */
+
+/* @group Layout */
+
+#content {
+	width: 70em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* #header {
+	height: 10em;
+}
+*/
+
+#table-of-contents {
+    width: 15em;
+    float: left;
+    overflow: auto;
+    position: fixed;
+}
+
+/* #main { */
+div.outline-2 {
+        width: 52em;
+	float: right;
+	/* The lines below are useful if the "main" div isn't available and
+	   div.outline-2 has to be used. */
+	position: relative;
+}
+
+#postamble {
+	clear: both;
+	text-align: center;
+}
+
+div.outline-2 pre {
+    width: 40em;
+    overflow: auto;
+}
+
+/* @end */
+
+/* @group Header */
+
+h1.title {
+	margin-top: 10px;
+	text-align: center;
+}
+
+h1.title {
+	font-size: 4em;
+	font-weight: bold;
+	letter-spacing: -0.1em;
+	margin-bottom: 0.2em;
+}
+
+/* @end */
+
+/* @group Org Keywords */
+
+.todo {
+	color: red;
+}
+
+.done {
+	color: green;
+}
+
+.tag {
+	color: blue;
+	text-transform: lowercase;
+	/* This will be obscured by the surrounding span tag, so blank everything. */
+	background: #fff;
+	border: none;
+	/* position: relative;
+	text-align: right;
+	right: 1em; */
+}
+
+.timestamp {
+}
+
+.timestamp-kwd  {
+	/* keyword associated with a time stamp, like SCHEDULED */
+}
+
+.target {
+	/* target for links */
+}
+
+/* @end */
+
+/* @group Table of Contents */
+
+#table-of-contents h2 {
+	letter-spacing: -0.1em;
+}
+
+#table-of-contents ul,
+#table-of-contents ol {
+    padding-left: 1em;
+}
+
+td {
+	border: 1px solid #ccc;
+}
+
+
+.outline-1, .outline-2, .outline-3, .outline-4, .outline-5, .outline-6 {
+    margin-left: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #57d; /* TODO: Find a better colour for this. */
+}
+
+a:hover {
+    border-bottom: 1px dotted #57d;
+}
+
+#postamble p {
+    margin: 0px;
+}
+
+code {
+    font-family: monospace;
+    font-size: 100%;
+    color: black;
+    border: 1px solid #DEDEDE;
+    padding: 0px 0.2em;
+}
+
+table {
+    width: 80%;
+}
+
+th {
+    text-align: center;
+}
+
+/*-------------------------------------*/
+.builtin {
+    /* font-lock-builtin-face */
+    color: #f4a460;
+}
+.comment {
+    /* font-lock-comment-face */
+    color: #737373;
+}
+.comment-delimiter {
+    /* font-lock-comment-delimiter-face */
+    color: #666666;
+}
+.constant {
+    /* font-lock-constant-face */
+    color: #db7093;
+}
+.doc {
+    /* font-lock-doc-face */
+    color: #b3b3b3;
+}
+.function-name {
+    /* font-lock-function-name-face */
+    color: #5f9ea0;
+}
+.headline {
+    /* headline-face */
+    color: #ffffff;
+    background-color: #000000;
+    font-weight: bold;
+}
+.keyword {
+    /* font-lock-keyword-face */
+    color: #4682b4;
+}
+
+    }
+.string {
+    /* font-lock-string-face */
+    color: #ccc79a;
+}
+
+.variable-name {
+    /* font-lock-variable-name-face */
+    color: #ff6a6a;
+}
+.warning {
+    /* font-lock-warning-face */
+    color: #ffffff;
+    background-color: #cd5c5c;
+    font-weight: bold;
+}

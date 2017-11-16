@@ -1,2 +1,3 @@
 # joh-docs
-Docs made while learning
+
+Documentation made while learning the craft 🤓
